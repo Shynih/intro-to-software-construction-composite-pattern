@@ -12,5 +12,19 @@ TEST(PowTEST, TwoFive) {
 	EXPECT_EQ(test->evaluate(), 32);
 }
 
+TEST(PowTEST, ZeroFive) {
+	Base* zero = new Op(0);
+	Base* five = new Op(5);
+	Base* test = new Pow(zero, five);
+	EXPECT_EQ(test->evaluate(), 1);
+}
+
+TEST(PowTest, NegOneFour) {
+	Base* negone = new Op(-1);
+	Base* four = new Op(4);
+	Base* test = new Pow(negone, four);
+	EXPECT_EQ(test->evaluate(), 1);
+}
+
 
 #endif //__POW_TEST_HPP__
