@@ -22,7 +22,7 @@ class Pow : public Base {
                 result = result * val1 -> evaluate();
             }
             std::stringstream stream;
-            stream << std::fixed << std::setprecision(1) <<  val1 -> evaluate() << "**" << val2 -> evaluate();
+            stream << std::fixed << std::setprecision(1) <<  val1 -> stringify() << "**" << val2 -> stringify();
             sentence = stream.str();
         }
         virtual double evaluate() {
