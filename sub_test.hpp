@@ -26,4 +26,11 @@ TEST(SubTEST, MinusNegative) {
 	EXPECT_EQ(test->evaluate(), 13);
 }
 
+TEST(SubTEST, SubStringify) {
+	Base* one = new Op(1);
+	Base* two = new Op(2);
+	Base* test = new Sub(one, two);
+	EXPECT_EQ(test -> stringify(), "1.0 - 2.0");
+}
+
 #endif

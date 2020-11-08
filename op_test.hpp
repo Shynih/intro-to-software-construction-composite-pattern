@@ -20,4 +20,9 @@ TEST(OpTest, OpEvaluateNegative) {
 	EXPECT_EQ(test->evaluate(), -2);
 }
 
+TEST(OpTest, OpStringify) {
+	Op* test = new Op (4);
+	EXPECT_EQ(test->stringify(), "4.0");
+}
+
 #endif //__OP_TEST_HPP__

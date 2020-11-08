@@ -25,4 +25,11 @@ TEST(MultTEST, MultNegative) {
 	Base* test = new Mult(three, negTen);
 	EXPECT_EQ(test->evaluate(), -30);
 }
+
+TEST(MultTEST, MultStringify) {
+	Base * one = new Op(1);
+	Base* two = new Op(2);
+	Base* test = new Mult(one, two);
+	EXPECT_EQ(test->stringify(), "1.0 * 2.0");
+}
 #endif

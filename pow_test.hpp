@@ -19,11 +19,18 @@ TEST(PowTEST, ZeroFive) {
 	EXPECT_EQ(test->evaluate(), 1);
 }
 
-TEST(PowTest, NegOneFour) {
+TEST(PowTEST, NegOneFour) {
 	Base* negone = new Op(-1);
 	Base* four = new Op(4);
 	Base* test = new Pow(negone, four);
 	EXPECT_EQ(test->evaluate(), 1);
+}
+
+TEST(PowTEST, PowStringify) {
+	Base* one = new Op(1);
+	Base* two = new Op(2);
+	Base* test = new Pow(one, two);
+	EXPECT_EQ(test -> stringify(), "1.0 ** 2.0");
 }
 
 

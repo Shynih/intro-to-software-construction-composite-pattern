@@ -26,4 +26,11 @@ TEST(DivTEST, DivNegative) {
 	EXPECT_EQ(test->evaluate(), -5);
 }
 
+TEST(DivTEST, DivStringify) {
+	Base* one = new Op(1);
+	Base* two = new Op(2);
+	Base* test = new Div(one, two);
+	EXPECT_EQ(test -> stringify(), "1.0 / 2.0");
+}
+
 #endif
